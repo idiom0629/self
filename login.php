@@ -27,12 +27,12 @@
     $result = $mysqli->query($sql);
     $row = $result->fetch_array();
     if ($row['name'] != $name) {  /* 搜尋不到*/
-      echo "無此使用者名稱";
+      echo '<script>alert("無此使用者名稱")</script>';
     } else {
       if ($row['password'] == $pswd) {   /* 搜尋到的帳號 帳號密碼與輸入帳號密碼一致*/
-        echo "登入成功";
+       echo '<script>alert("登入成功")</script>';
       } else {
-        echo "密碼錯誤";
+        echo '<script>alert("密碼錯誤")</script>';
       }
     }
   }
