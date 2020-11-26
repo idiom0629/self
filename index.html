@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Zhou-ChenYu</title>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <div id="app">
+
+    <nav class="">
+      <ul class="flex-nav">
+        <li><a href="#Chen">Chen Yu</a></li>
+
+      </ul>
+
+      <ul class="flex-nav1 shadow">
+
+        <li><a href="#about">About</a></li>
+        <li><a href="#skill">Skill</a></li>
+        <li><a href="#Work">Work</a></li>
+      </ul>
+    </nav>
+
+    <div id="Chen" class="one" data-aos="fade-right" data-aos-once="true" data-aos-duration="2750">
+      <div class="page-table">
+        <div class="table-cell text-center">
+          <div class="container">
+            <h1 class="hi">Hi! I'm Chen Yu Zhou</h1>
+            <h2 class="a2 container">It‘s my pleasure to serve you</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="about" class="two" data-aos="fade-right" data-aos-once="true" data-aos-duration="2750">
+
+      <div class="page-table">
+        <div class="table-cell">
+          <div class="container">
+            <h1>{{b}}</h1>
+            <h2>{{b1}}</h2>
+            <h3>{{b2}}</h3>
+            <h3>{{b3}}</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+    <script src="https://unpkg.com/vue@next"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+
+      const { ref } = Vue;
+      const App = {
+
+        setup() {
+          const b = ref("About Me.");
+          const b1 = ref("I'm Chen Yu Zhou / 周辰嶼");
+          const b2 = ref("畢業於國立臺中科技大學");
+          const b3 = ref("四技部 / 資訊管理系");
+
+
+          return { b, b1, b2, b3 };
+        },
+
+      };
+
+      Vue.createApp(App).mount("#app");
+      AOS.init();
+    </script>
+</body>
+
+<style>
+  html,
+  body,
+  #app,
+  h1 {
+    margin: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    overflow-x: hidden;
+
+  }
+
+  #app,
+  .h1,
+  .h2,
+  .h3,
+  .h4,
+  .h5,
+  .h6,
+  body,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p {
+    font-family: Nunito, Noto Sans TC, sans-serif;
+
+    line-height: 1.5;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  *,
+  :after,
+  :before {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  .shadow {
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15) !important;
+  }
+
+  /* nav */
+  nav>ul {
+    background-color: rgb(255, 255, 255);
+
+    list-style: none;
+    /* 移除項目符號 */
+    margin: 0;
+    padding: 0;
+  }
+
+  nav a {
+    color: inherit;
+    /* 移除超連結顏色 */
+    display: block;
+    /* 讓 <a> 填滿 <li> */
+    font-size: 1.2rem;
+    padding: 10px;
+    text-decoration: none;
+    /* 移除超連結底線 */
+  }
+
+  /* 滑鼠移到 <a> 時變成深底淺色 */
+  nav li:hover {
+    background-color: rgb(115, 115, 115);
+    color: white;
+  }
+
+  .flex-nav {
+    display: flex;
+    /*文字水平置中*/
+    align-items: center;
+    /*文字垂直置中*/
+
+    position: fixed;
+    width: 20%;
+    z-index: 99;
+  }
+
+  .flex-nav1 {
+    display: flex;
+    /*文字水平置中*/
+    align-items: center;
+    /*文字垂直置中*/
+    justify-content: flex-end;
+    position: fixed;
+    width: 100%;
+    z-index: 98;
+  }
+
+  /* nav */
+
+  /* one */
+  .one {
+    background-image: url("https://i.ibb.co/wJGS3y1/good.jpg");
+    width: 100%;
+    height: 100vh;
+    color: #fff;
+    background-color: #fff;
+    background-size: cover;
+    background-position: 50%;
+  }
+
+  .page-table {
+    display: table;
+    width: 100%;
+    height: 100%;
+    text-align: center !important;
+  }
+
+  .table-cell {
+
+    display: table-cell;
+    vertical-align: middle;
+    padding-top: 20px;
+    z-index: 5;
+
+  }
+
+  .container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    text-size-adjust: 100%;
+  }
+
+  .hi {
+    font-size: 8vmin;
+  }
+
+  .a2 {
+    color: white;
+    font-size: 4.75vmin;
+    border-right: 2px solid transparent;
+    /* 游標閃爍 */
+    word-break: break-all;
+    /* 英文一個字一個字出現 */
+    width: 19em;
+    /* 顯示字寬 */
+    animation: typing 4s
+      /*4秒跑完*/
+      steps(70, end)
+      /*禎數*/
+      , blink-caret 1s
+      /*讓游標每0.75秒閃爍一次*/
+      step-end
+      /*直到結束*/
+      infinite
+      /*無限循環*/
+    ;
+    font-family: Consolas, Monaco;
+    /*   字體  */
+    overflow: hidden;
+    /* 隱藏未出現的字 */
+    white-space: nowrap;
+    /*永不換行*/
+    text-align: center;
+  }
+
+  /* 列印效果 */
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+
+    /*從0開始*/
+    to {
+      width: 19em;
+    }
+
+    /*跑到第18位*/
+  }
+
+  @keyframes in {
+    from {}
+
+    /*從0開始*/
+    to {}
+
+    /*跑到第18位*/
+  }
+
+  /* one */
+
+  /* two */
+  .two {
+    height: 100vh;
+    width: 100%;
+    background-image: url("https://i.ibb.co/HhtBhwL/school.png");
+    background-size: cover;
+    background-position: 40%
+  }
+
+  /* two */
+
+  /* three */
+
+  .section-bg {
+    background-color: #f2f2f2;
+  }
+
+  .section {
+    padding: 40px 0;
+  }
+
+  .spaceWrapperContainer {
+    position: relative;
+  }
+
+  .spaceWrapperContainer .spaceWrapper {
+    height: 44px;
+    position: absolute;
+    top: -44px;
+  }
+
+  .subTitle {
+    margin-bottom: 40px;
+  }
+
+  .three {
+    text-align: center;
+    color: #2c3e50;
+  }
+
+  .row {
+    display: -ms-flexbox;
+    display: -webkit-box;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+  }
+
+  .mb-4,
+  .my-4 {
+    margin-bottom: 1.5rem !important;
+    margin-top: 1.5rem !important;
+  }
+
+  .animated {
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+  }
+
+  .col-md-6 {
+    -ms-flex: 0 0 50%;
+    -webkit-box-flex: 0;
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+
+  .bounceIn {
+    -webkit-animation-duration: .75s;
+    animation-duration: .75s;
+    -webkit-animation-name: bounceIn;
+    animation-name: bounceIn;
+  }
+
+  element.style {
+    visibility: visible;
+  }
+
+  .skill-item {
+    height: 100%;
+    background: #fff;
+    -webkit-box-shadow: 0 4px 0 rgba(0, 0, 0, .1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, .1);
+    border-radius: 8px;
+    -webkit-transition: all .5s;
+    transition: all .5s;
+    margin-bottom: 32px;
+    position: relative;
+    overflow-x: hidden;
+    padding: 40px 20px 0 20px;
+  }
+
+  .skill-item .icon {
+    font-size: 24px;
+    width: 68px;
+    height: 68px;
+    line-height: 68px;
+    background: #f2f2f2;
+    border-radius: 50%;
+    -webkit-transition: all .5s;
+    transition: all .5s;
+  }
+
+  .d-inline-block {
+    display: inline-block !important;
+  }
+
+  .mb-3,
+  .my-3 {
+    margin-bottom: 1rem !important;
+  }
+
+  .font-weight-bold {
+    font-weight: 700 !important;
+  }
+
+  [data-aos="1"] {
+    opacity: 0;
+    fade-right;
+  }
+
+  [data-aos="1"].aosanimate {
+    opacity: 1;
+  }
+
+  /* three */
+</style>
+
+</html>
