@@ -44,7 +44,7 @@
       echo '<script>alert("註冊成功")</script>';
       /* 輸入無誤 新增進資料庫*/
     } else {
-      echo substr_replace($a, '密碼不一致', 0);
+      echo '<script>alert("密碼不一致")</script>';
     }
     mysqli_free_result($result);
   }
